@@ -22,7 +22,7 @@ public class Surnames {
 		
 	}
 	
-	public void randomSurnames() {
+	public void randomSurname() {
 		
 		
 	
