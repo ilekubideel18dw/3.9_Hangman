@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
+import com.zubiri.hangman.Words;
+
 public class Interface {
 	public static void main(String[] args) {
 		
 		Words words = new Words();
-		
-		words.enterWords();
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -22,6 +22,17 @@ public class Interface {
 			char guessed[] = new char[3];
 			
 			int guessedCounter = 0;
+			
+			String randomWord = words.selectRandomWord();
+			
+			/*
+			 * Meter esto como método de Words.
+			 */
+			for(int i = 0; i < randomWord.length(); i++) {
+				
+				System.out.print("_ ");
+				
+			}
 			
 			
 			

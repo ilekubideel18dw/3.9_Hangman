@@ -1,3 +1,4 @@
+package com.zubiri.hangman;
 import java.util.Random;
 import java.util.ArrayList;
 
@@ -6,7 +7,18 @@ public class Words {
 	private ArrayList<String> words = new ArrayList<String>();
 	private String randomWord = "";
 	
-	public Words(){};
+	public Words(){
+		
+		this.words.add("lazkano");
+		this.words.add("intxausti");
+		this.words.add("artola");
+		this.words.add("alberdi");
+		this.words.add("lekubide");
+		this.words.add("ortiz");
+		this.words.add("gonzalez");
+		
+	}
+	
 	public Words(ArrayList<String> words) {
 		
 		this.words = words;
@@ -37,23 +49,17 @@ public class Words {
 		
 	}
 	
-	public void selectRandomWord() {
+	public void addWord(String word){
 		
-		this.randomWord = words.get((new Random()).nextInt(words.size()));
-		
-		// https://code.i-harness.com/es/q/4cd182
+		this.words.add(word);
 		
 	}
 	
-	public void enterWords() {
+	public String selectRandomWord() {
 		
-		words.add("lazkano");
-		words.add("intxausti");
-		words.add("artola");
-		words.add("alberdi");
-		words.add("lekubide");
-		words.add("ortiz");
-		words.add("gonzalez");
+		return this.randomWord = words.get((new Random()).nextInt(words.size()));
+		
+		// https://code.i-harness.com/es/q/4cd182
 		
 	}
 	
